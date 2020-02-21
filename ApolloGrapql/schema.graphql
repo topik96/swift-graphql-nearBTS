@@ -1,0 +1,10 @@
+query getNearBTS($distance: Int, $lat: float8, $long: float8, $limit: Int) {
+  search_tower_near_user(args: {distance_kms: $distance, lat: $lat, long: $long}, limit: $limit){
+    entity_id
+    filenum
+    issue_date
+    latitude
+    longitude
+    regnum
+  }
+}
